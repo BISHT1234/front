@@ -10,7 +10,7 @@ export function Login(){
     const [mssg,setmssg] =useState("")
    const navigation=useNavigate()
     function check_user(){
-        axios.post('/chekuser',data,)
+        axios.post('https://quiet-2.onrender.com/chekuser',data,)
         .then(res=>{
             if(res.data.exist){
          navigation('/homepage',{state:{mydetails:res.data.User}})
